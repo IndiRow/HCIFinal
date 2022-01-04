@@ -10,6 +10,7 @@
   body, html {
     width: 100%;
     height: 100%;
+    
   }
   
   body {
@@ -28,10 +29,10 @@
   }
   #logo a{
     text-decoration: none;
-    color: #fff;
+    color: #000;
   }
   header #logo {
-    color: #fff;
+    color: #000;
     cursor: pointer;
   }
   
@@ -89,6 +90,8 @@
   #about > a:not(:last-child) {
     margin-right: 7%;
   }
+
+  
   
   /* Стили для фиксированной шапки */
   
@@ -104,3 +107,225 @@
   
   .fixed #about a {color: #343434}
   .fixed #about a:hover {color: #7c7c7c}
+
+  .main {
+    padding: 30px 15px;
+  }
+  .content {
+    max-width: 100%;
+    text-align: center;
+  }
+  .content__gallery {
+    margin: 0px 0px 40px 0px;
+  }
+  
+  @media (min-width: 992px) {
+    .main {
+      grid-area: main;
+      display: grid;
+      grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+    }
+    .content {
+      grid-column: 3 / 4;
+      padding: 0px 0px 0px 30px;
+      margin-left: -15%;
+    }
+  }
+  /* ================ */
+  .gallery {
+  }
+
+  .gallery__title {
+    margin: 100px 0 50px 0;
+  color: #484848;
+  font-size: 2em;
+  max-width: 100% !important;
+  }
+
+  .gallery__title {
+    overflow: hidden;
+  }
+  .gallery__title h3:before,
+  .gallery__title h3:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 100%;
+    height: 2px;
+    background: black;
+    border: solid #FFF;
+    border-width: 0 5px;
+  }
+  .gallery__title h3:before {
+    margin-left: -100%;
+  }
+  .gallery__title h3:after {
+    margin-right: -100%;
+  }
+
+  .gallery__items {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .gallery__item {
+    background-color: #794f45;
+    padding: 0px 0px 85% 0px;
+    position: relative;
+  }
+  .gallery__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  @media (min-width: 800px) {
+    .gallery__item_big {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+  }
+  
+  .footer {
+    padding: 15px;
+    background-color: #77608d;
+    grid-area: footer;
+    align-items: center;
+    display: grid;
+    grid-template: 1fr / 1fr minmax(auto, 300px) minmax(auto, 1100px) 1fr;
+  }
+  
+  @media (min-width: 550px) {
+    .footer__copy {
+      grid-column: 2 / 3;
+    }
+    .footer__text {
+      grid-column: 3 / 4;
+      text-align: right;
+    }
+  }
+  @media (max-width: 550px) {
+    .footer {
+      grid-template: 1fr 1fr / 1fr;
+      justify-items: center;
+    }
+    .footer__copy {
+      order: 2;
+    }
+    .footer__text {
+      order: 1;
+    }
+  }
+
+  #contacts{
+    text-align: center;
+  }
+  .contacts-title{
+    margin: 50px 0;
+    color: #484848;
+    font-size: 2em;
+  }
+  
+  .contacts-title {
+    overflow: hidden;
+  }
+  .contacts-title h3:before,
+  .contacts-title h3:after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 100%;
+    height: 2px;
+    background: black;
+    border: solid #FFF;
+    border-width: 0 5px;
+  }
+  .contacts-title h3:before {
+    margin-left: -100%;
+  }
+  .contacts-title h3:after {
+    margin-right: -100%;
+  }
+  
+  .info{
+    color: #484848;
+    font-size: 1.5em;
+  }
+  .info a{
+    text-decoration: none;
+  }
+  .info h3{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .info .authors{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: 100%;
+    max-width: 100%;
+  }
+  .info .authors h3{
+    margin-bottom: 0px;
+  }
+  .author-card{
+    width: 50%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  @media (max-width: 500px){
+    .author-card{
+      width: 100%;
+      margin-top: 20px;
+    }
+  }
+  .info h4{
+    margin-top: 30px;
+  }
+  .social-media{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-media {
+    font-size: 1.5em;
+    transition: color .5s;
+  }
+  .social-media li{
+    margin: 10px 20px -10px;
+  }
+  
+  .fa-facebook-square{
+    color: #3b5999;
+  }
+  
+  .fa-vk{
+    color: #3b5999;
+  }
+  
+  .fa-twitter-square{
+    color: #55acee;
+  }
+  
+  .fa-telegram{
+    color: #55acee;
+  }
+  
+  .fa-instagram{
+    color: #f711ab;
+  }
+  
+  .fa-google{
+    color: #dd4b39;
+  }
+  
+  .fa-facebook-square:hover, .fa-twitter-square:hover, .fa-instagram:hover, .fa-google:hover, .fa-vk:hover, .fa-telegram:hover{
+    color: #45e19f;
+  }
