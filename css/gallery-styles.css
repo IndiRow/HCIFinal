@@ -26,6 +26,7 @@
     background: transparent;
     float: left;
     position: fixed;
+    z-index: 100;
   }
   #logo a{
     text-decoration: none;
